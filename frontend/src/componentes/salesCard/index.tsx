@@ -1,6 +1,8 @@
-import icon from '../../assets/logo.svg'
-import NotificationButton from '../notificationButton'
-import './styles.css'
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import icon from '../../assets/logo.svg';
+import NotificationButton from '../notificationButton';
+import './styles.css';
 function Header() {
   return (
     <div className="dsmeta-container">
@@ -8,10 +10,20 @@ function Header() {
         <h2 className="dsmeta-sales-title">Vendas</h2>
         <div>
           <div className="dsmeta-form-control-container">
-            <input className="dsmeta-form-control" type="text"/>
+            <DatePicker
+            selected={new Date()}
+            onChange={(date: Date) =>{}}
+            className="dsmeta-from-control"
+            dateFormat="dd/MM/yyyy"
+            />
           </div>
           <div className="dsmeta-form-control-container">
-            <input className="dsmeta-form-control" type="text" />
+            <DatePicker
+            selected={new Date()}
+            onChange={(date: Date) =>{}}
+            className="dsmeta-from-control"
+            dateFormat="dd/MM/yyyy"
+            />
           </div>
         </div>
 
